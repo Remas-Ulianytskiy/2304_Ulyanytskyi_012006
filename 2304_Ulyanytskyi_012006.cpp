@@ -24,7 +24,7 @@ void getInput(string& text, const string& chars)
     cout << "Для закінчення введення даних натисніть клавішу esc\n";
 
 #ifdef _WIN32
-    while (true)
+    while (run)
     {
         if (_kbhit()) {
             qt = _getch();
