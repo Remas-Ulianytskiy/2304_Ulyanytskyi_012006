@@ -20,6 +20,7 @@ void getInput(string& text, const string& chars)
 #endif
 
     char qt;
+    bool run = true;
     cout << "Для закінчення введення даних натисніть клавішу esc\n";
 
 #ifdef _WIN32
@@ -36,6 +37,7 @@ void getInput(string& text, const string& chars)
                 }
                 else if (qt == 27) {
                     qt = ' ';
+                    run = false;
                     break;
                 }
             }
@@ -92,7 +94,6 @@ int main()
     string Num = "0123456789";
     string Symb = "`~!@#$%^&*()_+}{|\":<>?/.,\\';][=-№";
     string text;
-    //char   qt;
     bool   menu_run = true;
     int    choice = 0;
 
